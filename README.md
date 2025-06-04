@@ -14,7 +14,7 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-	"kuringmin/md2html.nvim",
-	cmd = "MdToHtml"
-}
+	"KuringM/md2html-nvim",
+	cmd = "MdToHtml",
+},
 ```

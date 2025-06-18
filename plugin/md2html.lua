@@ -12,21 +12,21 @@ vim.api.nvim_create_user_command("MdToHtml", function()
 		return
 	end
 
-	f:write([[
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Markdown</title>
-  <style>table,th,td{border:1px solid #ccc;border-collapse:collapse;padding:5px;}</style>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<body>
-]])
+-- 	f:write([[
+-- <!DOCTYPE html>
+-- <html>
+-- <head>
+--   <meta charset="UTF-8">
+--   <title>Markdown</title>
+--   <style>table,th,td{border:1px solid #ccc;border-collapse:collapse;padding:5px;}</style>
+--   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+-- </head>
+-- <body>
+-- ]])
 	for _, l in ipairs(html_body) do
 		f:write(l .. "\n")
 	end
-	f:write("</body>\n</html>")
+	-- f:write("</body>\n</html>")
 	f:close()
 
 	print("✅ 已生成 HTML 文件: " .. html_path)
